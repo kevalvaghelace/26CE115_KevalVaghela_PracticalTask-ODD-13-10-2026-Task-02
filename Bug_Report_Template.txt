@@ -1,0 +1,47 @@
+ITUS102 - PRACTICAL EXAMINATION | DEBUGGING AND IMPLEMENTATION REPORT
+Date: 13-10-2026 | Task 02 - Library Late-Return Fine Calculator
+
+Enrollment No.: 26CE115
+Name: Keval Vaghela
+
+SIMPLE BUGS (write a brief explanation for each)
+Bug | Original problem                                                          | Correction made				| Why required
+
+S1  |Navigation link had an incorrect section ID (#calcuator).                  |Changed it to #calculator.             	|To Ensure the navigation link opens the correct calculator section.
+S2  |Footer used a generic <div> element.                  			|Replaced it with the semantic <footer> element.|Improves HTML semantics and accessibility.
+S3  |background-color was missing a colon in the CSS declaration.               |Added the colon after background-color.        |Fixes the CSS syntax error so the background color applies.
+S4  |Used .pageTitle to select an element with id="pageTitle".                  |Changed .pageTitle to #pageTitle.              |The # selector targets an ID correctly
+S5  |Late days were calculated by subtracting 1 from the input value.           |Removed - 1 from the calculation.              |Ensures the fine is calculated using the actual number of late days.
+S6  |Processing charge was set to ₹100 instead of ₹10.                  	|Changed the processing charge to 10.           |Ensures the total fine follows the specified policy.
+
+CODE COMPLETION / IMPLEMENTATION (briefly state what was completed)
+M1: Added UTF-8 character encoding and a responsive viewport meta tag.
+M2: Added a semantic <aside class="notice"> with the heading “Important Note” and a sentence about checking input values.
+M3: Used display: flex and justify-content: space-between to arrange the navigation links.
+M4: Used CSS Grid with two equal-width columns and a gap between the cards.
+M5: Added a media query for screens of 600px or less to stack the cards and navigation vertically.
+M6: Completed calculateFine() to calculate the fine using days × books × rate.
+D1: Implemented chooseRate() using conditional statements for Student (₹5), Staff (₹3), and Visitor (₹10).
+D2: Implemented calculateTotal() to return ₹0 when there is no fine, or add the processing charge when a fine is due.
+D3: Implemented buildBreakdown() using a for loop to display the cumulative fine for each day.
+
+FUNCTIONAL TEST
+Test input: Late days: 5,Number of books: 2,Member type: Student
+
+Observed result: 
+Rate: ₹5 per day per book
+Basic fine: ₹50
+Processing charge: ₹10
+Total fine: ₹60
+
+Day 1: ₹10
+Day 2: ₹20
+Day 3: ₹30
+Day 4: ₹40
+Day 5: ₹50
+
+Mobile layout checked (Yes/No):Yes
+
+GIT VERSION CONTROL
+git log -1 --oneline output:
+GitHub URL (if available): https://github.com/kevalvaghelace/26CE115_KevalVaghela_PracticalTask-ODD-13-10-2026-Task-02.git
